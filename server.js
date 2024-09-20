@@ -5,7 +5,7 @@ const multer  = require('multer')
 const {mergePdfs} = require('./mergepdf')//mergePdfs would be an object so we have to use destructuring while importing this method from testpdf.js
 const upload = multer({ dest: 'uploads/' })
 app.use('/static', express.static('public'))
-const port = 3000
+const port = 3001
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "templates/index.html"))//we are serving complete html file to server
